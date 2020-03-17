@@ -1,0 +1,21 @@
+ /*  @Async
+    public void sendDailyTrackingEmail(List<DailyTrackingEmailReportData> data, List<DailyTrackingLocationEmailReportDate> locationData, User toUser, Project project, String unsubscribeToken, List<ProjectReportServiceImpl.LocationPlanImageDTO> locationPlanImageDTOS) throws Exception{
+
+        MimeMessage message = javaMailSender.createMimeMessage();
+        MimeMessageHelper helper = new MimeMessageHelper(message,
+        MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED,
+        StandardCharsets.UTF_8.name());
+
+
+        helper.setText("<html><body><img src='cid:locationImage1.png' style='width:550px; height:500px'/></body></html>", true);
+
+
+
+
+        helper.addInline("locationImage1.png", () -> new ByteArrayInputStream(locationPlanImageDTOS.get(0).getImageUrl()), "image/png");
+        helper.addAttachment("locationImage3.png", () -> new ByteArrayInputStream(locationPlanImageDTOS.get(0).getImageUrl()));
+        helper.setSubject("No subject available");
+        helper.setTo(toUser.getEmail());
+        helper.setFrom("no-reply@ontargetcloud.com");
+
+        javaMailSender.send(message);    }*/
